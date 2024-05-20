@@ -19,7 +19,7 @@ class TestSPUQ(unittest.TestCase):
         case 2 {'perturbed': [([{'role': 'user', 'content': 'Does 3 fall short of 100?'}], 0.7), ([{'role': 'user', 'content': 'Is 3 inferior to 100?'}], 0.7), ([{'role': 'user', 'content': 'Is the value of 100 larger than 3?'}], 0.7), ([{'role': 'user', 'content': 'Does 100 exceed 3?'}], 0.7), ([{'role': 'user', 'content': 'Is 3 less than 100?'}], 0.7)], 'outputs': ['Yes, 3 falls short of 100.', 'Yes, 3 is inferior to 100.', 'Yes, the value of 100 is larger than 3.', 'Yes, 100 exceeds 3.', 'Yes, 3 is less than 100.'], 'confidence': 0.45}
         """
 
-        llm = LLM('gpt-35-turbo-v0301')
+        llm = LLM('gpt-3.5-turbo-0301')
         spuq = SPUQ(llm=llm, perturbation='paraphrasing', aggregation='rougeL', n_perturb=5)
 
         question_1 = 'Will Jay-Z reach the age of 60 before Kendrick Lamar?'
