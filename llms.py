@@ -3,7 +3,7 @@ from openai import OpenAI
 
 
 class LLM:
-    def __init__(self, model='gpt-35-turbo-v0301'):
+    def __init__(self, model='gpt-3.5-turbo-0301'):
         self.client = OpenAI(
             api_key=os.environ.get("OPENAI_API_KEY"),
         )
