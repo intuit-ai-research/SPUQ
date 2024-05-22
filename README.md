@@ -29,7 +29,7 @@ Here's an example to set up SPUQ. You can play with it using the [notebook](/dem
 
 ```python
 from spuq import SPUQ
-from utils.llms import LLM
+from llms import LLM
 llm = LLM('gpt-35-turbo-v0301')
 spuq = SPUQ(llm=llm, perturbation='paraphrasing', aggregation='rougeL', n_perturb=5)
 ```
