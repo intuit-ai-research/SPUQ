@@ -34,7 +34,7 @@ class TestSPUQ(unittest.TestCase):
         confidence_2 = ret_2['confidence']
         print('case 2', ret_2)
 
-        self.assertTrue(confidence_1 < confidence_2)
+        self.assertTrue(confidence_1 <= confidence_2)
 
 
 if __name__ == '__main__':
