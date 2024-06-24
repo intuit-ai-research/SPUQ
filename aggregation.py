@@ -21,7 +21,7 @@ class Aggregation:
 
 class IntraSampleAggregation(Aggregation):
     """
-    let the LLM to express (verbalize) its uncertainty
+    let the LLM express (verbalize) its uncertainty
     see: https://arxiv.org/abs/2205.14334
     """
 
@@ -34,7 +34,7 @@ class IntraSampleAggregation(Aggregation):
         if self.kind == 'verbalized_word':
             self.prompt = 'Your confidence is? (low, median, high)'
         else:
-            self.prompt =  'Your confidence is? (a float score between 0.0 to 1.0)'
+            self.prompt = 'Your confidence is? (a float score between 0.0 to 1.0)'
 
         
     def single_confidence(self, inp: list, out: str) -> float:
@@ -86,9 +86,7 @@ class InterSampleAggregation(Aggregation):
 
     def __init__(self, metric: str, weighted=True) -> None:
         super().__init__(weighted)
-
         self.metric = metric
-        self.weighted = weighted
 
 
     def aggregate(self, inp_out: list) -> float:
